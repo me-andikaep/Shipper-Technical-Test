@@ -1,0 +1,53 @@
+@mixin Navbar-Sidebar() {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  list-style: none;
+  padding: 30px 0px 20px 0px;
+
+
+  .nav-item{
+    width: inherit;
+    padding: 5px 0px;
+    text-decoration: none;
+
+    .nav-link {
+      display: flex;
+      flex: 1 1;
+      align-items: center;
+      text-decoration: none;
+      white-space: nowrap;
+      list-style: none;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: auto;
+      letter-spacing: 0.7px;
+      border-left: 3px solid transparent;
+      height: 34px;
+      column-gap: 4px;
+      padding-left: 10px;
+
+      &:hover {
+        color: $PrimaryColor;
+      }
+
+      &.active {
+        color: $PrimaryColor;
+        border-left: 3px solid $PrimaryColor;
+      }
+
+      .nav-text{
+        margin-left: 8px;
+        opacity: 1;
+        display: block;
+        transition: all 0.7ms;
+      }
+    }
+  }
+}

@@ -1,6 +1,26 @@
 *, :after, :before {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.content-container{
+  padding-top: 80px;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: $BackgroundColor2;
+  transition: all 0.7ms;
+  overflow: hidden;
+  height: 100%;
+
+  @media (max-width: 540px) {
+    margin-left: 0;
+  }
 }

@@ -2,4 +2,8 @@
 @import './mixins';
 @import './customs';
 @import './layouts';
+@import './components/header';
+@import './components/_burgerMenu';
+@import './components/loadingLazy';
+@import './components/sidebar';
 @import './pages/driver';

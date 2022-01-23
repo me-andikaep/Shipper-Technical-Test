@@ -1,0 +1,52 @@
+.header-container{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: $BackgroundColor1;
+  z-index: 1050;
+  border: 1px solid black;
+
+  .wrapper-left{
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    .logo{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .wrapper-right{
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+
+    .usr-login{
+      font-weight: 600;
+      display: block;
+
+      @media (max-width: 540px) {
+        display: none;
+      }
+
+      .usr-name{
+        color: $PrimaryColor;
+      }
+    }
+
+    .usr-img{
+      display: flex;
+      align-items: center;
+      color: $Grey1;
+    }
+  }
+}

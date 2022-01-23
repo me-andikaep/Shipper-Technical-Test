@@ -1,5 +1,5 @@
 const webpack = require("webpack");
-const path = require("path");
+const path = require('path');
 
 module.exports = {
 	entry: path.resolve(__dirname, './src/index.js'),
@@ -24,6 +24,13 @@ module.exports = {
 					},
 				],
 			},
+			{
+				test: /\.(png|svg|jpg|gif)$/,
+				loader: 'file-loader',
+				options: {
+					esModule: false,
+				},
+			},
 		],
 	},
 	resolve: {
@@ -40,5 +47,6 @@ module.exports = {
 		// contentBase: path.resolve(__dirname, "./dist"),
 		static: path.resolve(__dirname, './public'),
 		hot: true,
+		historyApiFallback: true,
 	},
 };
