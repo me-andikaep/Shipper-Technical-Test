@@ -1,5 +1,6 @@
 .driver-management{
-  overflow:hidden;
+  // height: 100%;
+  margin-bottom: 20px;
   
   .wrapper-header{
     background-color: $BackgroundColor1;
@@ -75,10 +76,185 @@
   }
 
   .wrapper-driver-list{
+    position: relative;
     margin-top: 2rem;
-    height: 100%;
     width: 100%;
+    // height: 100%;
     // background-color: $BackgroundColor1;
-    border-top: 1px solid black;
+    padding-bottom:  20px;
+    display: flex;
+    flex:  1 1;
+    
+
+    .wrapper-driver-card{
+      overflow: scroll;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 1rem;
+      column-gap: 2rem;
+      row-gap: 1rem;
+      flex: 1;
+
+      &::-webkit-scrollbar{
+        height: 6px;
+        color: black;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background: #919191; 
+        border-radius: 3px;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .driver-card{
+        width:250px;
+        min-width: 250px;
+        height: 100%;
+        background-color: $BackgroundColor1;
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          min-width: 250px;
+          min-height: 250px;
+          height: 100%;
+        }
+
+        .header{
+          padding: 1rem;
+          border-bottom: 1px solid $Grey2;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          color: $Grey1;
+
+          .driver-id{
+            font-size: 14px;
+
+            span{
+              margin-left: 4px;
+              color:  $PrimaryColor;
+              font-weight: bold;
+            }
+          }
+
+          .settings{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+          }
+        }
+
+        .content{
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          padding: 1rem;
+          row-gap: 1rem;
+          column-gap: 1rem;
+          height: 100%;
+          align-items: center;
+
+          @media (max-width: 768px) {
+            flex-direction: row;
+          }
+
+          .driver-foto{
+            flex: 1;
+            height: auto;
+            width: 100%;
+            color: $Grey1;
+            display: flex;
+
+            .user-icon{
+              width: 80px;
+              height: 80px;
+              @media (max-width: 768px) {
+                width: 110px;
+                height: 110px;
+              }
+            }
+          }
+
+          .driver-info{
+            flex: 2;
+            width: 100%;
+            height: 100%;
+
+            .info-group{
+              margin-bottom: 8px;
+              font-weight: bold;
+
+              .info-title{
+                font-size: 12px;
+                color: $Grey1;
+              }
+
+              .info-desc{
+                font-size: 14px;
+                color: black;
+              }
+
+              @media (max-width: 768px) {
+                &.email{
+                  display: none;
+                }
+                &.tgl{
+                  display: none;
+                }
+              }
+            }
+            
+          }
+        }
+      }
+
+    }
+  }
+
+  .wrapper-navigation{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 3rem;
+
+    .navigation-left{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      
+      &.disabled{
+        color: $Grey2;
+        opacity : 0.7;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
+
+    .navigation-right{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+
+      &.disabled{
+        color: $Grey2;
+        opacity : 0.7;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
   }
 }

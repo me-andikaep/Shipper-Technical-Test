@@ -28,10 +28,10 @@
       font-weight: bold;
       margin-right: auto;
       letter-spacing: 0.7px;
-      border-left: 3px solid transparent;
+      border-left: 4px solid transparent;
       height: 34px;
       column-gap: 4px;
-      padding-left: 10px;
+      padding-left: 16px;
 
       &:hover {
         color: $PrimaryColor;
@@ -39,11 +39,11 @@
 
       &.active {
         color: $PrimaryColor;
-        border-left: 3px solid $PrimaryColor;
+        border-left: 4px solid $PrimaryColor;
       }
 
       .nav-text{
-        margin-left: 8px;
+        margin-left: 10px;
         opacity: 1;
         display: block;
         transition: all 0.7ms;

@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types';
 import { FaUserCircle } from 'react-icons/fa';
-import { MdHome, MdAdd } from 'react-icons/md';
-import { RiCalendar2Fill } from 'react-icons/ri';
+import {
+	MdHome,
+	MdAdd,
+	MdArrowBackIos,
+	MdArrowForwardIos,
+} from 'react-icons/md';
+import { RiCalendar2Fill, RiMoreFill } from 'react-icons/ri';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 export default function Icons({
@@ -36,10 +41,28 @@ export default function Icons({
 					onClick={onClick}
 				/>
 			);
-
 		case 'add':
 			return <MdAdd style={{ ...style }} className={className} size={size} />;
-
+		case 'more':
+			return (
+				<RiMoreFill style={{ ...style }} className={className} size={size} />
+			);
+		case 'previous':
+			return (
+				<MdArrowBackIos
+					style={{ ...style }}
+					className={className}
+					size={size}
+				/>
+			);
+		case 'next':
+			return (
+				<MdArrowForwardIos
+					style={{ ...style }}
+					className={className}
+					size={size}
+				/>
+			);
 		default:
 			break;
 	}
