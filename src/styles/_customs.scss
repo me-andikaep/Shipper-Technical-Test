@@ -19,8 +19,13 @@ body {
   transition: all 0.7ms;
   overflow: hidden;
   height: 100%;
+  
 
   @media (max-width: 540px) {
     margin-left: 0;
+  }
+
+  .wrapper-content{
+    padding: 2rem;
   }
 }

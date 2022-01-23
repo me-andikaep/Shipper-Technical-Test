@@ -51,3 +51,16 @@
     }
   }
 }
+
+
+@mixin btn-primary {
+  border: 1px solid $PrimaryColor;
+  outline: none;
+  font-weight: bold;
+  border-radius: 2px;
+  font-size: 12px;
+  background: $PrimaryColor;
+  padding: 0px 8px;
+  height: 40px;
+  color: white;
+}

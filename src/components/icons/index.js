@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
 import { FaUserCircle } from 'react-icons/fa';
-import { MdHome } from 'react-icons/md';
+import { MdHome, MdAdd } from 'react-icons/md';
 import { RiCalendar2Fill } from 'react-icons/ri';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 export default function Icons({
 	type,
@@ -25,8 +27,29 @@ export default function Icons({
 					size={size}
 				/>
 			);
+		case 'search':
+			return (
+				<AiOutlineSearch
+					style={{ ...style }}
+					className={className}
+					size={size}
+					onClick={onClick}
+				/>
+			);
+
+		case 'add':
+			return <MdAdd style={{ ...style }} className={className} size={size} />;
 
 		default:
 			break;
 	}
 }
+
+Icons.propTypes = {
+	type: PropTypes.string,
+	size: PropTypes.number,
+	style: PropTypes.any,
+	className: PropTypes.string,
+	color: PropTypes.string,
+	onClick: PropTypes.func,
+};

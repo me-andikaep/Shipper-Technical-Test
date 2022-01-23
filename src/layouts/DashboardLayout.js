@@ -36,7 +36,9 @@ const DashboardLayout = ({}) => {
 				<Sidebar />
 			</div>
 			<div className='content-container'>
-				<Switch>{getRoutes(routes)}</Switch>
+				<div className='wrapper-content'>
+					<Switch>{getRoutes(routes)}</Switch>
+				</div>
 			</div>
 		</div>
 	);
