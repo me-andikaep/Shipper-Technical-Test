@@ -4,7 +4,12 @@ const SearchInput = ({ prefixIcon, onChange, value }) => {
 	return (
 		<div className='wrapper-search-input'>
 			{prefixIcon}
-			<input type='text' className='search-input' />
+			<input
+				type='text'
+				className='search-input'
+				onChange={onChange}
+				value={value}
+			/>
 		</div>
 	);
 };

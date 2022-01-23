@@ -1,11 +1,13 @@
-import Icons from '../icons';
+import Icons from '../icons'; //import icon list
+import moment from 'moment'; //moment untuk format tangga
+
 const DriverListCard = ({ data }) => {
 	return (
-		<div className='driver-card' key={data.id}>
+		<div className='driver-card'>
 			<div className='header'>
 				<div className='driver-id'>
 					Driver ID
-					<span>{data.id}</span>
+					<span>{data?.id?.value ? data?.id?.value : '-'}</span>
 				</div>
 				<div className='settings'>
 					<Icons type='more' />
@@ -19,7 +21,7 @@ const DriverListCard = ({ data }) => {
 					<div className='info-group'>
 						<div className='info-title'>Nama Driver</div>
 						<div className='info-desc'>
-							{data.firstName}, {data.lastName}
+							{data?.name?.first}, {data?.name?.last}
 						</div>
 					</div>
 					<div className='info-group'>
@@ -32,7 +34,9 @@ const DriverListCard = ({ data }) => {
 					</div>
 					<div className='info-group tgl'>
 						<div className='info-title'>Tanggal Lahir</div>
-						<div className='info-desc'>{data.tglLahir}</div>
+						<div className='info-desc'>
+							{moment(data.dob?.date).format('DD-MM-YYYY')}
+						</div>
 					</div>
 				</div>
 			</div>
