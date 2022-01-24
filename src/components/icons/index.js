@@ -45,7 +45,12 @@ export default function Icons({ type, size, style, className, color, onClick, da
 			return <MdAdd style={{ ...style }} className={className} size={size} />;
 		case 'more':
 			return (
-				<RiMoreFill style={{ ...style }} className={className} size={size} />
+				<RiMoreFill
+					style={{ ...style }}
+					className={className}
+					size={size}
+					data-testid={dataTestId}
+				/>
 			);
 		case 'previous':
 			return (

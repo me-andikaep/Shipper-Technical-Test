@@ -8,7 +8,7 @@
 		"start": "webpack serve --config ./webpack.config.js --mode development --port 3005",
 		"build": "webpack --config ./webpack.config.js --mode production",
 		"dev": "webpack --config ./webpack.config.js --mode development",
-		"watch": "jest --watch"
+		"watch": "jest --watch --detectOpenHandles"
 	},
 	"keywords": [],
 	"author": "",

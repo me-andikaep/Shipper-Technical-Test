@@ -57,7 +57,17 @@ describe('Testing Kelengkapan komponent Driver', () => {
 				<Driver />
 			</Provider>
 		);
-		const btnAddDriver = screen.getByTestId('menu-driver-btn-add');
+		const btnAddDriver = screen.getByTestId('menu-driver-btn-previous-page');
 		expect(btnAddDriver).toBeInTheDocument();
+	});
+
+	it('Memastikan Tombol Next Page ada saat di render', () => {
+		render(
+			<Provider store={store}>
+				<Driver />
+			</Provider>
+		);
+		const btnNextDriver = screen.getByTestId('menu-driver-btn-next-page');
+		expect(btnNextDriver).toBeInTheDocument();
 	});
 });

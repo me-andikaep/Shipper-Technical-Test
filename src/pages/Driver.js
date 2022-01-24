@@ -123,6 +123,7 @@ const Driver = (props) => {
 						page.curentPage !== 1 ? '' : 'disabled'
 					}`}
 					onClick={() => prevPage()}
+					data-testid='menu-driver-btn-previous-page'
 				>
 					<Icons type='previous' size={20} />
 					Previous Page
@@ -134,6 +135,7 @@ const Driver = (props) => {
 							: 'disabled'
 					}`}
 					onClick={() => nextPage()}
+					data-testid='menu-driver-btn-next-page'
 				>
 					Next Page
 					<Icons type='next' size={20} />
