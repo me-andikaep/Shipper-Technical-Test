@@ -6,7 +6,7 @@
 Lazy Loading di set 1000 ms / 1 s loading. dpt di setting di src/config/routes
 
 
-deployed : https://61ee7eeec0362400080acfc2--dreamy-sinoussi-c66407.netlify.app/driver
+deployed : https://dreamy-sinoussi-c66407.netlify.app/driver
 ```
 
 
