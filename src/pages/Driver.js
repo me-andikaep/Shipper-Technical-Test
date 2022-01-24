@@ -18,8 +18,7 @@ const Driver = (props) => {
 	const [displayData, setDisplayData] = useState([]);
 	const [filterDt, setFilterDt] = useState('');
 
-	console.log('driverState.drivers', driverState.drivers);
-	console.log('driverList', driverList);
+
 
 	//mendefinisikan dispatch redux
 	const dispatch = useDispatch();

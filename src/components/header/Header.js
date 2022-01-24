@@ -14,14 +14,23 @@ const Header = ({ burgerMenuOpen, setBurgerMenuOpen }) => {
 					alt=''
 					src={require('../../assets/logo/shipper.png')}
 					className='logo'
+					data-testid='logo-main'
 				/>
 			</div>
 			<div className='wrapper-right'>
-				<div className='usr-login'>
-					Hello, <span className='usr-name'>Shipper User</span>
+				<div className='usr-login' data-testid='usr-login-hello'>
+					Hello,{' '}
+					<span className='usr-name' data-testid='usr-login-user'>
+						Shipper User
+					</span>
 				</div>
 				<div className='usr-img'>
-					<Icons type='user' size={40} className='usr-icon' />
+					<Icons
+						type='user'
+						size={40}
+						className='usr-icon'
+						dataTestId='usr-img-icon'
+					/>
 				</div>
 			</div>
 		</div>

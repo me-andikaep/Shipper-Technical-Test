@@ -11,18 +11,16 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 
 //list icons
-export default function Icons({
-	type,
-	size,
-	style,
-	className,
-	color,
-	onClick,
-}) {
+export default function Icons({ type, size, style, className, color, onClick, dataTestId }) {
 	switch (type) {
 		case 'user':
 			return (
-				<FaUserCircle style={{ ...style }} className={className} size={size} />
+				<FaUserCircle
+					style={{ ...style }}
+					className={className}
+					size={size}
+					data-testid={dataTestId}
+				/>
 			);
 		case 'home':
 			return <MdHome style={{ ...style }} className={className} size={size} />;
