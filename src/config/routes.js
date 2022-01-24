@@ -7,7 +7,7 @@ const routes = [
 		component: Lazyloading(
 			() => {
 				return new Promise((resolve) => {
-					setTimeout(() => resolve(import('../pages/Beranda')), 1500);
+					setTimeout(() => resolve(import('../pages/Beranda')), 1000);
 				});
 			},
 			{
@@ -21,7 +21,7 @@ const routes = [
 		component: Lazyloading(
 			() => {
 				return new Promise((resolve) => {
-					setTimeout(() => resolve(import('../pages/Driver')), 1500);
+					setTimeout(() => resolve(import('../pages/Driver')), 1000);
 				});
 			},
 			{
@@ -36,7 +36,7 @@ const routes = [
 		component: Lazyloading(
 			() => {
 				return new Promise((resolve) => {
-					setTimeout(() => resolve(import('../pages/Pickup')), 1500);
+					setTimeout(() => resolve(import('../pages/Pickup')), 1000);
 				});
 			},
 			{

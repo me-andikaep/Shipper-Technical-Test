@@ -1,7 +1,11 @@
 {
+  //@babel/preset-env A Babel preset for each environment.
+  //@babel/preset-react Babel preset for all React plugins.
   "presets": [
   "@babel/preset-env",
   ["@babel/preset-react", {"runtime": "automatic"}]
   ],
+  //@babel/plugin-proposal-class-properties This plugin transforms static class properties as well as properties declared with the property initializer syntax
+  //@babel/plugin-transform-runtime This plugin Externalise references to helpers and builtins, automatically polyfilling your code without polluting globals
   "plugins": ["@babel/plugin-proposal-class-properties", "@babel/plugin-transform-runtime"]
 }

@@ -13,6 +13,7 @@ const Sidebar = ({ setBurgerMenuOpen }) => {
 					onClick={() => {
 						if (setBurgerMenuOpen) setBurgerMenuOpen();
 					}}
+					data-testid='menu-beranda'
 				>
 					<Icons type='home' size={20} />
 					<span className='nav-text'>Beranda</span>
@@ -26,6 +27,7 @@ const Sidebar = ({ setBurgerMenuOpen }) => {
 					onClick={() => {
 						if (setBurgerMenuOpen) setBurgerMenuOpen();
 					}}
+					data-testid='menu-driver'
 				>
 					<Icons type='user' size={20} />
 					<span className='nav-text'>Driver Management</span>
@@ -39,6 +41,7 @@ const Sidebar = ({ setBurgerMenuOpen }) => {
 					onClick={() => {
 						if (setBurgerMenuOpen) setBurgerMenuOpen();
 					}}
+					data-testid='menu-pickup'
 				>
 					<Icons type='calendar' size={20} />
 					<span className='nav-text'>Pickup</span>

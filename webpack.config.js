@@ -4,6 +4,8 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: path.resolve(__dirname, './src/index.js'),
+
+	//export loader module
 	module: {
 		rules: [
 			{

@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import Header from '../components/header/Header';
@@ -16,8 +16,9 @@ describe('Testing Kelengkapan komponent header', () => {
 
 	it('Memastikan Text Hello muncul saat di render', () => {
 		render(<Header />);
-		const txtHello = screen.getByTestId('usr-login-hello');
-		expect(txtHello).toBeInTheDocument();
+		// const txtHello = screen.getByTestId('usr-login-hello');
+		// expect(txtHello).toBeInTheDocument();
+		expect(screen.getByText(/Hello/)).toBeInTheDocument();
 	});
 
 	it('Memastikan Text User yang Login muncul saat di render', () => {
