@@ -18,13 +18,16 @@ const Driver = (props) => {
 	const [displayData, setDisplayData] = useState([]);
 	const [filterDt, setFilterDt] = useState('');
 
+	console.log('driverState.drivers', driverState.drivers);
+	console.log('driverList', driverList);
+
 	//mendefinisikan dispatch redux
 	const dispatch = useDispatch();
 
 	//get driver dengan redux
 	useEffect(() => {
 		//jika data sudah ada tidak akan get lg
-		if (driverList.length !== 0) {
+		if (driverState.drivers === null) {
 			dispatch(getDriver());
 		}
 	}, []);
@@ -37,7 +40,7 @@ const Driver = (props) => {
 	const getPaginatedData = () => {
 		let startIndex = page.curentPage * page.limit - page.limit;
 		let endIndex = startIndex + page.limit;
-		setDisplayData(driverList.slice(startIndex, endIndex));
+		setDisplayData(driverList && driverList.slice(startIndex, endIndex));
 	};
 
 	//setiap halaman berubah memperbarui halaman mapping
@@ -101,11 +104,12 @@ const Driver = (props) => {
 
 			<div className='wrapper-driver-list'>
 				<div className='wrapper-driver-card'>
-					{displayData.map((item, i) => (
-						<Fragment key={i}>
-							<DriverListCard data={item} />
-						</Fragment>
-					))}
+					{displayData &&
+						displayData.map((item, i) => (
+							<Fragment key={i}>
+								<DriverListCard data={item} />
+							</Fragment>
+						))}
 				</div>
 			</div>
 
@@ -121,7 +125,9 @@ const Driver = (props) => {
 				</div>
 				<div
 					className={`navigation-right ${
-						driverList.length / page.limit !== page.curentPage ? '' : 'disabled'
+						driverList && driverList.length / page.limit !== page.curentPage
+							? ''
+							: 'disabled'
 					}`}
 					onClick={() => nextPage()}
 				>
