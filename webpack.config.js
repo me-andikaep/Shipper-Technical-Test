@@ -48,7 +48,7 @@ module.exports = {
 	devServer: {
 		// contentBase is deprecated by static in webpack v5
 		// contentBase: path.resolve(__dirname, "./dist"),
-		static: path.resolve(__dirname, './dist'),
+		static: path.resolve(__dirname, './public'),
 		hot: true,
 		historyApiFallback: true,
 	},
