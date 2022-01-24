@@ -68,6 +68,7 @@ export default function Icons({ type, size, style, className, color, onClick, da
 	}
 }
 
+//hanya tipe props tertentu yang diterima
 Icons.propTypes = {
 	type: PropTypes.string,
 	size: PropTypes.number,

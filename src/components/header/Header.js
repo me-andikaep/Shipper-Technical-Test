@@ -1,6 +1,6 @@
 import Burger from '../burgerMenu/Burger';
 import Icons from '../icons/index';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'; 
 
 const Header = ({ burgerMenuOpen, setBurgerMenuOpen }) => {
 	return (
@@ -37,6 +37,7 @@ const Header = ({ burgerMenuOpen, setBurgerMenuOpen }) => {
 	);
 };
 
+//hanya tipe props tertentu yang diterima
 Header.propTypes = {
 	burgerMenuOpen: PropTypes.bool,
 	setBurgerMenuOpen: PropTypes.func,

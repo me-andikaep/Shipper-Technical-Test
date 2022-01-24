@@ -9,6 +9,7 @@ const Menu = ({ burgerMenuOpen, setBurgerMenuOpen }) => {
 	);
 };
 
+//hanya tipe props tertentu yang diterima
 Menu.propTypes = {
 	burgerMenuOpen: PropTypes.bool,
 	setBurgerMenuOpen: PropTypes.func,

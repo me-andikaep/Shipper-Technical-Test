@@ -81,8 +81,12 @@ const Driver = (props) => {
 		<div className='driver-management'>
 			<div className='wrapper-header'>
 				<div className='wrapper-title'>
-					<h2 className='title'>DRIVER MANAGEMENT</h2>
-					<p className='text'>Data driver yang bekerja denagn Anda.</p>
+					<h2 className='title' data-testid='menu-driver-title'>
+						DRIVER MANAGEMENT
+					</h2>
+					<p className='text' data-testid='menu-driver-title-desc'>
+						Data driver yang bekerja dengan Anda.
+					</p>
 				</div>
 				<div className='wrapper-action'>
 					<div className='search'>
@@ -92,9 +96,10 @@ const Driver = (props) => {
 							}
 							onChange={(e) => setFilterDt(e.target.value)}
 							value={filterDt}
+							dataTestId='menu-driver-filter-driver'
 						/>
 					</div>
-					<button className='btn-add-driver'>
+					<button className='btn-add-driver' data-testid='menu-driver-btn-add'>
 						TAMBAH DRIVER
 						<Icons type='add' size={20} />
 					</button>

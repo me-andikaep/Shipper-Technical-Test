@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const SearchInput = ({ prefixIcon, onChange, value }) => {
+const SearchInput = ({ prefixIcon, onChange, value, dataTestId }) => {
 	return (
 		<div className='wrapper-search-input'>
 			{prefixIcon}
@@ -9,11 +9,13 @@ const SearchInput = ({ prefixIcon, onChange, value }) => {
 				className='search-input'
 				onChange={onChange}
 				value={value}
+				data-testid={dataTestId}
 			/>
 		</div>
 	);
 };
 
+//hanya tipe props tertentu yang diterima
 SearchInput.propTypes = {
 	prefixIcon: PropTypes.element,
 	onChange: PropTypes.func,
